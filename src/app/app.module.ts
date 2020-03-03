@@ -11,7 +11,6 @@ import {ComponentsModule} from './components/components.module';
 import {AppComponent} from './app.component';
 import {AdminLayoutComponent} from './layouts/admin-layout/admin-layout.component';
 import {AuthLayoutComponent} from './layouts/auth-layout/auth-layout.component';
-import {DemoMaterialModule} from './material-module';
 import {DataTableModule} from 'ng-angular8-datatable';
 
 
@@ -24,7 +23,6 @@ import {DataTableModule} from 'ng-angular8-datatable';
         ComponentsModule,
         RouterModule,
         AppRoutingModule,
-        DemoMaterialModule,
         DataTableModule,
         /*AgmCoreModule.forRoot({
           apiKey: 'YOUR_GOOGLE_MAPS_API_KEY'

@@ -6,20 +6,12 @@ import {AdminLayoutRoutes} from './admin-layout.routing';
 import {DashboardComponent} from '../../dashboard/dashboard.component';
 
 
-import {
-    MatButtonModule,
-    MatInputModule,
-    MatRippleModule,
-    MatFormFieldModule,
-    MatTooltipModule,
-    MatSelectModule
-} from '@angular/material';
+import {MatButtonModule, MatFormFieldModule, MatInputModule, MatRippleModule, MatSelectModule, MatTooltipModule} from '@angular/material';
 import {SalesComponent} from '../../views/sales/sales.component';
 import {PreSettlementComponent} from '../../views/pre-settlement/pre-settlement.component';
 import {AttendanceComponent} from '../../views/attendance/attendance.component';
 import {ValidatorsComponent} from '../../views/validators/validators.component';
 import {IncidentComponent} from '../../views/incident/incident.component';
-import {DemoMaterialModule} from '../../material-module';
 
 @NgModule({
     imports: [
@@ -33,7 +25,6 @@ import {DemoMaterialModule} from '../../material-module';
         MatInputModule,
         MatSelectModule,
         MatTooltipModule,
-        DemoMaterialModule,
     ],
     declarations: [
         DashboardComponent,
