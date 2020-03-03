@@ -32,7 +32,8 @@ import {IncidentComponent} from '../../views/incident/incident.component';
         PreSettlementComponent,
         AttendanceComponent,
         ValidatorsComponent,
-        IncidentComponent
+        IncidentComponent,
+        AddSalesComponent
     ]
 })
 
