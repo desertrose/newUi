@@ -1,7 +1,8 @@
 <div class="main-content">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-4" align="center"></div>
+      <div class="col-md-4" align="center">
         <div class="card">
           <div class="card-header card-header-danger">
             <h4 class="card-title">Add Sales Record</h4>
@@ -11,7 +12,7 @@
             <form >
               <div class="row">
 
-                <div class="col-md-5">
+                <div class="col-md-12">
                   <mat-form-field class="example-full-width">
                     <input matInput placeholder="" value="LocationID" disabled>
                   </mat-form-field>
@@ -39,23 +40,23 @@
                   </ul>
                 </div>
 
-                <div class="col-sm-3">
+                <div class="col-sm-12">
                   <mat-form-field class="example-full-width">
                     <input matInput type="text" placeholder="No of  Gas Units">
                   </mat-form-field>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-12">
                   <mat-form-field class="example-full-width">
                     <input matInput type="text" placeholder="No of  Cylinder Units">
                   </mat-form-field>
                 </div>
-                <div class="col-sm-5">
+                <div class="col-sm-12">
                   <mat-form-field class="example-full-width">
                     <input matInput type="text" placeholder="Route ID">
                   </mat-form-field>
                 </div>
 
-                <div class="col-sm-5">
+                <div class="col-sm-12">
 
                   <input class="form-control col-3" type="date"> &nbsp;
 
@@ -63,12 +64,13 @@
 
 
               </div>
-              <button mat-raised-button type="submit" class="btn btn-danger pull-right">Update Profile</button>
+              <button mat-raised-button type="submit" [routerLink]="['/sales-records']"  class="btn btn-danger pull-right">Save Sales</button>
               <div class="clearfix"></div>
             </form>
           </div>
         </div>
       </div>
+      <div class="col-md-4" align="center"></div>
     </div>
   </div>
 </div>

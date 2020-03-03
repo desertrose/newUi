@@ -12,6 +12,7 @@ import {PreSettlementComponent} from '../../views/pre-settlement/pre-settlement.
 import {AttendanceComponent} from '../../views/attendance/attendance.component';
 import {ValidatorsComponent} from '../../views/validators/validators.component';
 import {IncidentComponent} from '../../views/incident/incident.component';
+import {AddSalesComponent} from '../../views/add-sales/add-sales.component';
 
 @NgModule({
     imports: [
