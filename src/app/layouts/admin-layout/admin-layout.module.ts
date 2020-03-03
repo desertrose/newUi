@@ -8,7 +8,6 @@ import { UserProfileComponent } from '../../user-profile/user-profile.component'
 import { TableListComponent } from '../../table-list/table-list.component';
 import { TypographyComponent } from '../../typography/typography.component';
 import { IconsComponent } from '../../icons/icons.component';
-import { MapsComponent } from '../../maps/maps.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
 
 
@@ -20,6 +19,11 @@ import {
   MatTooltipModule,
   MatSelectModule
 } from '@angular/material';
+import {SalesComponent} from '../../views/sales/sales.component';
+import {PreSettlementComponent} from '../../views/pre-settlement/pre-settlement.component';
+import {AttendanceComponent} from '../../views/attendance/attendance.component';
+import {ValidatorsComponent} from '../../views/validators/validators.component';
+import {IncidentComponent} from '../../views/incident/incident.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -39,8 +43,12 @@ import {
     TableListComponent,
     TypographyComponent,
     IconsComponent,
-    MapsComponent,
     NotificationsComponent,
+    SalesComponent,
+    PreSettlementComponent,
+    AttendanceComponent,
+    ValidatorsComponent,
+    IncidentComponent
   ]
 })
 

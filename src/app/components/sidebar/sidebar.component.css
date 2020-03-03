@@ -1,7 +1,15 @@
 
-/*.logo .logo-img img {*/
-/*    width: 160px;*/
-/*    top: 16px;*/
+.logo .logo-img img {
+    width: 134px;
+    top: 9px;
 
-/*}*/
+}
+
+::ng-deep .sidebar .logo {
+    padding: 69px 0px;
+    margin: 0;
+    display: block;
+    position: relative;
+    z-index: 4;
+}
 
