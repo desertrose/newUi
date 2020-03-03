@@ -4,7 +4,31 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
-                        <h1>Test</h1>
+                        <div class="input-group">
+                            <input class="form-control col-3" type="date"> &nbsp;&nbsp;&nbsp; <input class="form-control col-3" type="date"> &nbsp;&nbsp;&nbsp; <input
+                                type="text" class="form-control col-3" placeholder="Filter..."> <a href="#" class="btn btn-primary btn-success"><span class="glyphicon glyphicon-plus"></span> Add Sales Records</a>
+                        </div>
+                        <table class="table">
+                            <tr>
+                                <th>#</th>
+                                <th>Route ID</th>
+                                <th>Date</th>
+                                <th>services</th>
+                                <th>Quantity</th>
+                                <th>Actions</th>
+                            </tr>
+                            <tr *ngFor="let sales of values; let i = index">
+                                <td>{{i + 1}}</td>
+                                <td>{{sales.RoutaID}}</td>
+                                <td>{{sales.Date}}</td>
+                                <td>{{sales.Services}}</td>
+                                <td>{{sales.Quantity}}</td>
+                                <td><a href="#" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span>
+                                    Edit</a>
+                                    <a href="#" class="btn btn-success"><span
+                                            class="glyphicon glyphicon-download-alt"></span> Send</a></td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>

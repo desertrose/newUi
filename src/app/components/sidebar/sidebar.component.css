@@ -1,15 +1,13 @@
-
 .logo .logo-img img {
-    width: 134px;
+    width: 203px;
     top: 9px;
 
 }
 
 ::ng-deep .sidebar .logo {
-    padding: 69px 0px;
+    padding: 106px 0px;
     margin: 0;
     display: block;
     position: relative;
     z-index: 4;
 }
-
