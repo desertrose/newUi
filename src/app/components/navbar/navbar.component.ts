@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+
+    lastlogintime : Date = new Date();
     private listTitles: any[];
     location: Location;
       mobile_menu_visible: any = 0;

@@ -1,0 +1,18 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 15px;
+    margin-left: 231px;
+}
+
+::ng-deep .main-panel .main-content {
+    margin-top: 70px;
+    padding: 30px 15px;
+    min-height: calc(100vh - 123px);
+    background: url("../../assets/img/bg-texture-01.png");
+}
+
+
+::ng-deep fixed-plugin .badge-danger{
+    background-color: #F60!important;
+}
