@@ -346,6 +346,25 @@
         }
     }
 
+    &[data-background-color="blue"]{
+        @include sidebar-background-color($brand-blue, $white-color);
+
+        .user,
+        .logo,
+        .nav li.separator{
+            &:after{
+                background-color: rgba(255,255,255, .3);
+            }
+        }
+
+        .nav{
+            li:hover:not(.active) > a,
+            li.active > [data-toggle="collapse"]{
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+        }
+    }
+
     &[data-image]:after,
     &.has-image:after{
         opacity: .77;
