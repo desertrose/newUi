@@ -137,7 +137,7 @@
       }
     }
   },
-  "defaultProject": "material-dashboard-angular",
+  "defaultProject": "Potogas",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
