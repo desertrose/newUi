@@ -1,6 +1,5 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component} from '@angular/core';
 import * as jexcel from 'jexcel';
-import {style} from '@angular/animations';
 
 @Component({
     selector: 'app-sales',
@@ -11,16 +10,291 @@ export class SalesComponent implements  AfterViewInit {
 
     data = [
         {
-        'RUTA': '275',
-        'lunes': '0.00',
-        'martes': '0.00',
-        'miércoles': '0.00',
-        'jueves': '0.00',
-        'viernes': '0.00',
-        'sábado': '0.00',
-        'domingo': '0.00',
-         'Total de venta por ruta': '=SUM(A1:H1)'
-    },
+            'RUTA': '202',
+            'lunes': '21.67',
+            'martes': '17.67',
+            'miércoles': '21.67',
+            'jueves': '22.33',
+            'viernes': '18.67',
+            'sábado': '20.67',
+            'domingo': '18.00',
+            'Total de venta por ruta': '140.68',
+            'Total de ventas sin domingos': '122.68',
+            'Total de ventas solo domingos': '18.00'
+        },
+        {
+            'RUTA': '205',
+            'lunes': '0.00',
+            'martes': '0.00',
+            'miércoles': '0.00',
+            'jueves': '0.00',
+            'viernes': '0.00',
+            'sábado': '0.00',
+            'domingo': '0.00',
+            'Total de venta por ruta': '0.00',
+            'Total de ventas sin domingos': '0.00',
+            'Total de ventas solo domingos': '0.00'
+        },
+        {
+            'RUTA': '206',
+            'lunes': '0.00',
+            'martes': '0.00',
+            'miércoles': '0.00',
+            'jueves': '0.00',
+            'viernes': '0.00',
+            'sábado': '0.00',
+            'domingo': '0.00',
+            'Total de venta por ruta': '0.00',
+            'Total de ventas sin domingos': '0.00',
+            'Total de ventas solo domingos': '0.00'
+        },
+        {
+            'RUTA': '207',
+            'lunes': '21.00',
+            'martes': '12.00',
+            'miércoles': '23.00',
+            'jueves': '0.00',
+            'viernes': '20.67',
+            'sábado': '16.67',
+            'domingo': '22.33',
+            'Total de venta por ruta': '115.67',
+            'Total de ventas sin domingos': '93.34',
+            'Total de ventas solo domingos': '22.33'
+        },
+        {
+            'RUTA': '208',
+            'lunes': '15.33',
+            'martes': '14.67',
+            'miércoles': '25.67',
+            'jueves': '26.33',
+            'viernes': '16.00',
+            'sábado': '26.67',
+            'domingo': '23.00',
+            'Total de venta por ruta': '147.67',
+            'Total de ventas sin domingos': '124.67',
+            'Total de ventas solo domingos': '23.00'
+        },
+        {
+            'RUTA': '210',
+            'lunes': '16.33',
+            'martes': '30.67',
+            'miércoles': '25.33',
+            'jueves': '0.00',
+            'viernes': '36.67',
+            'sábado': '22.00',
+            'domingo': '32.80',
+            'Total de venta por ruta': '163.80',
+            'Total de ventas sin domingos': '131.00',
+            'Total de ventas solo domingos': '32.80'
+        },
+        {
+            'RUTA': '212',
+            'lunes': '14.00',
+            'martes': '12.00',
+            'miércoles': '10.00',
+            'jueves': '0.00',
+            'viernes': '14.00',
+            'sábado': '23.00',
+            'domingo': '14.00',
+            'Total de venta por ruta': '87.00',
+            'Total de ventas sin domingos': '73.00',
+            'Total de ventas solo domingos': '14.00'
+        },
+        {
+            'RUTA': '213',
+            'lunes': '12.00',
+            'martes': '19.33',
+            'miércoles': '29.00',
+            'jueves': '0.00',
+            'viernes': '30.33',
+            'sábado': '28.33',
+            'domingo': '15.67',
+            'Total de venta por ruta': '134.66',
+            'Total de ventas sin domingos': '118.99',
+            'Total de ventas solo domingos': '15.67'
+        },
+        {
+            'RUTA': '214',
+            'lunes': '23.67',
+            'martes': '25.00',
+            'miércoles': '21.83',
+            'jueves': '14.33',
+            'viernes': '25.50',
+            'sábado': '21.00',
+            'domingo': '21.00',
+            'Total de venta por ruta': '152.33',
+            'Total de ventas sin domingos': '131.33',
+            'Total de ventas solo domingos': '21.00'
+        },
+        {
+            'RUTA': '228',
+            'lunes': '19.00',
+            'martes': '18.33',
+            'miércoles': '23.67',
+            'jueves': '17.00',
+            'viernes': '27.67',
+            'sábado': '17.33',
+            'domingo': '24.00',
+            'Total de venta por ruta': '147.00',
+            'Total de ventas sin domingos': '123.00',
+            'Total de ventas solo domingos': '24.00'
+        },
+        {
+            'RUTA': '232',
+            'lunes': '0.00',
+            'martes': '0.00',
+            'miércoles': '0.00',
+            'jueves': '0.00',
+            'viernes': '0.00',
+            'sábado': '0.00',
+            'domingo': '0.00',
+            'Total de venta por ruta': '0.00',
+            'Total de ventas sin domingos': '0.00',
+            'Total de ventas solo domingos': '0.00'
+        },
+        {
+            'RUTA': '240',
+            'lunes': '14.00',
+            'martes': '21.00',
+            'miércoles': '0.00',
+            'jueves': '24.67',
+            'viernes': '40.33',
+            'sábado': '29.67',
+            'domingo': '20.67',
+            'Total de venta por ruta': '150.34',
+            'Total de ventas sin domingos': '129.67',
+            'Total de ventas solo domingos': '20.67'
+        },
+        {
+            'RUTA': '245',
+            'lunes': '26.67',
+            'martes': '28.00',
+            'miércoles': '30.00',
+            'jueves': '25.00',
+            'viernes': '29.00',
+            'sábado': '21.17',
+            'domingo': '26.67',
+            'Total de venta por ruta': '186.51',
+            'Total de ventas sin domingos': '159.84',
+            'Total de ventas solo domingos': '26.67'
+        },
+        {
+            'RUTA': '249',
+            'lunes': '22.67',
+            'martes': '24.00',
+            'miércoles': '25.33',
+            'jueves': '19.00',
+            'viernes': '24.67',
+            'sábado': '19.67',
+            'domingo': '27.00',
+            'Total de venta por ruta': '162.34',
+            'Total de ventas sin domingos': '135.34',
+            'Total de ventas solo domingos': '27.00'
+        },
+        {
+            'RUTA': '251',
+            'lunes': '22.67',
+            'martes': '15.00',
+            'miércoles': '19.67',
+            'jueves': '0.00',
+            'viernes': '30.00',
+            'sábado': '23.00',
+            'domingo': '29.00',
+            'Total de venta por ruta': '139.34',
+            'Total de ventas sin domingos': '110.34',
+            'Total de ventas solo domingos': '29.00'
+        },
+        {
+            'RUTA': '252',
+            'lunes': '14.67',
+            'martes': '16.33',
+            'miércoles': '17.33',
+            'jueves': '0.00',
+            'viernes': '30.00',
+            'sábado': '23.33',
+            'domingo': '23.00',
+            'Total de venta por ruta': '124.66',
+            'Total de ventas sin domingos': '101.66',
+            'Total de ventas solo domingos': '23.00'
+        },
+        {
+            'RUTA': '253',
+            'lunes': '40.33',
+            'martes': '30.33',
+            'miércoles': '26.73',
+            'jueves': '0.00',
+            'viernes': '36.67',
+            'sábado': '28.00',
+            'domingo': '24.33',
+            'Total de venta por ruta': '186.39',
+            'Total de ventas sin domingos': '162.06',
+            'Total de ventas solo domingos': '24.33'
+        },
+        {
+            'RUTA': '261',
+            'lunes': '21.33',
+            'martes': '23.67',
+            'miércoles': '39.00',
+            'jueves': '0.00',
+            'viernes': '23.00',
+            'sábado': '30.67',
+            'domingo': '27.67',
+            'Total de venta por ruta': '165.34',
+            'Total de ventas sin domingos': '137.67',
+            'Total de ventas solo domingos': '27.67'
+        },
+        {
+            'RUTA': '262',
+            'lunes': '21.67',
+            'martes': '34.33',
+            'miércoles': '14.00',
+            'jueves': '0.00',
+            'viernes': '32.33',
+            'sábado': '28.33',
+            'domingo': '25.00',
+            'Total de venta por ruta': '155.66',
+            'Total de ventas sin domingos': '130.66',
+            'Total de ventas solo domingos': '25.00'
+        },
+        {
+            'RUTA': '263',
+            'lunes': '0.00',
+            'martes': '0.00',
+            'miércoles': '0.00',
+            'jueves': '0.00',
+            'viernes': '0.00',
+            'sábado': '0.00',
+            'domingo': '0.00',
+            'Total de venta por ruta': '0.00',
+            'Total de ventas sin domingos': '0.00',
+            'Total de ventas solo domingos': '0.00'
+        },
+        {
+            'RUTA': '270',
+            'lunes': '27.33',
+            'martes': '15.33',
+            'miércoles': '31.67',
+            'jueves': '0.00',
+            'viernes': '28.33',
+            'sábado': '18.67',
+            'domingo': '21.67',
+            'Total de venta por ruta': '143.00',
+            'Total de ventas sin domingos': '121.33',
+            'Total de ventas solo domingos': '21.67'
+        },
+        {
+            'RUTA': '275',
+            'lunes': '0.00',
+            'martes': '0.00',
+            'miércoles': '0.00',
+            'jueves': '0.00',
+            'viernes': '0.00',
+            'sábado': '0.00',
+            'domingo': '0.00',
+            'Total de venta por ruta': '0.00',
+            'Total de ventas sin domingos': '0.00',
+            'Total de ventas solo domingos': '0.00'
+        },
         {
             'RUTA': '301',
             'lunes': '42.00',
@@ -29,7 +303,10 @@ export class SalesComponent implements  AfterViewInit {
             'jueves': '0.00',
             'viernes': '38.00',
             'sábado': '35.00',
-            'domingo': '32.67'
+            'domingo': '32.67',
+            'Total de venta por ruta': '204.67',
+            'Total de ventas sin domingos': '172.00',
+            'Total de ventas solo domingos': '32.67'
         },
         {
             'RUTA': '303',
@@ -39,7 +316,10 @@ export class SalesComponent implements  AfterViewInit {
             'jueves': '15.67',
             'viernes': '26.47',
             'sábado': '26.33',
-            'domingo': '20.00'
+            'domingo': '20.00',
+            'Total de venta por ruta': '154.90',
+            'Total de ventas sin domingos': '134.90',
+            'Total de ventas solo domingos': '20.00'
         },
         {
             'RUTA': '306',
@@ -49,217 +329,10 @@ export class SalesComponent implements  AfterViewInit {
             'jueves': '24.33',
             'viernes': '35.67',
             'sábado': '30.00',
-            'domingo': '28.00'
-        },
-        {
-            'RUTA': '308',
-            'lunes': '25.33',
-            'martes': '26.00',
-            'miércoles': '29.33',
-            'jueves': '0.00',
-            'viernes': '27.00',
-            'sábado': '21.67',
-            'domingo': '27.67'
-        },
-        {
-            'RUTA': '310',
-            'lunes': '23.00',
-            'martes': '19.33',
-            'miércoles': '28.33',
-            'jueves': '30.00',
-            'viernes': '42.20',
-            'sábado': '30.33',
-            'domingo': '22.33'
-        },
-        {
-            'RUTA': '311',
-            'lunes': '11.33',
-            'martes': '13.00',
-            'miércoles': '17.33',
-            'jueves': '50.33',
-            'viernes': '19.00',
-            'sábado': '15.67',
-            'domingo': '16.67'
-        },
-        {
-            'RUTA': '312',
-            'lunes': '26.33',
-            'martes': '18.33',
-            'miércoles': '21.33',
-            'jueves': '0.00',
-            'viernes': '20.00',
-            'sábado': '20.47',
-            'domingo': '16.00'
-        },
-        {
-            'RUTA': '313',
-            'lunes': '0.00',
-            'martes': '0.00',
-            'miércoles': '0.00',
-            'jueves': '0.00',
-            'viernes': '0.00',
-            'sábado': '0.00',
-            'domingo': '0.00'
-        },
-        {
-            'RUTA': '328',
-            'lunes': '15.67',
-            'martes': '15.33',
-            'miércoles': '18.33',
-            'jueves': '0.00',
-            'viernes': '22.00',
-            'sábado': '15.33',
-            'domingo': '16.67'
-        },
-        {
-            'RUTA': '332',
-            'lunes': '36.67',
-            'martes': '32.33',
-            'miércoles': '24.00',
-            'jueves': '0.00',
-            'viernes': '33.33',
-            'sábado': '37.67',
-            'domingo': '20.67'
-        },
-        {
-            'RUTA': '340',
-            'lunes': '13.00',
-            'martes': '11.67',
-            'miércoles': '18.83',
-            'jueves': '20.67',
-            'viernes': '29.33',
-            'sábado': '24.33',
-            'domingo': '10.00'
-        },
-        {
-            'RUTA': '345',
-            'lunes': '22.33',
-            'martes': '15.67',
-            'miércoles': '32.00',
-            'jueves': '0.00',
-            'viernes': '28.33',
-            'sábado': '32.00',
-            'domingo': '35.33'
-        },
-        {
-            'RUTA': '349',
-            'lunes': '10.67',
-            'martes': '29.67',
-            'miércoles': '25.33',
-            'jueves': '0.00',
-            'viernes': '27.33',
-            'sábado': '24.67',
-            'domingo': '36.00'
-        },
-        {
-            'RUTA': '350',
-            'lunes': '16.33',
-            'martes': '16.33',
-            'miércoles': '19.00',
-            'jueves': '0.00',
-            'viernes': '29.00',
-            'sábado': '21.33',
-            'domingo': '27.00'
-        },
-        {
-            'RUTA': '352',
-            'lunes': '28.33',
-            'martes': '31.67',
-            'miércoles': '25.00',
-            'jueves': '22.00',
-            'viernes': '31.67',
-            'sábado': '33.67',
-            'domingo': '22.67'
-        },
-        {
-            'RUTA': '361',
-            'lunes': '23.00',
-            'martes': '24.33',
-            'miércoles': '19.33',
-            'jueves': '0.00',
-            'viernes': '23.00',
-            'sábado': '21.00',
-            'domingo': '15.00'
-        },
-        {
-            'RUTA': '363',
-            'lunes': '24.67',
-            'martes': '36.33',
-            'miércoles': '28.67',
-            'jueves': '40.33',
-            'viernes': '37.00',
-            'sábado': '39.00',
-            'domingo': '40.33'
-        },
-        {
-            'RUTA': '368',
-            'lunes': '0.00',
-            'martes': '0.00',
-            'miércoles': '0.00',
-            'jueves': '0.00',
-            'viernes': '0.00',
-            'sábado': '0.00',
-            'domingo': '0.00'
-        },
-        {
-            'RUTA': '369',
-            'lunes': '27.00',
-            'martes': '35.33',
-            'miércoles': '22.67',
-            'jueves': '0.00',
-            'viernes': '28.33',
-            'sábado': '18.67',
-            'domingo': '27.00'
-        },
-        {
-            'RUTA': '371',
-            'lunes': '31.33',
-            'martes': '34.00',
-            'miércoles': '43.50',
-            'jueves': '0.00',
-            'viernes': '44.00',
-            'sábado': '38.10',
-            'domingo': '42.33'
-        },
-        {
-            'RUTA': '372',
-            'lunes': '15.67',
-            'martes': '21.00',
-            'miércoles': '27.33',
-            'jueves': '0.00',
-            'viernes': '25.67',
-            'sábado': '12.00',
-            'domingo': '20.33'
-        },
-        {
-            'RUTA': '373',
-            'lunes': '21.00',
-            'martes': '18.00',
-            'miércoles': '21.67',
-            'jueves': '24.00',
-            'viernes': '20.67',
-            'sábado': '25.67',
-            'domingo': '14.33'
-        },
-        {
-            'RUTA': '374',
-            'lunes': '16.00',
-            'martes': '20.67',
-            'miércoles': '21.00',
-            'jueves': '18.67',
-            'viernes': '20.67',
-            'sábado': '18.00',
-            'domingo': '13.67'
-        },
-        {
-            'RUTA': '375',
-            'lunes': '15.00',
-            'martes': '18.67',
-            'miércoles': '27.00',
-            'jueves': '0.00',
-            'viernes': '32.67',
-            'sábado': '17.00',
-            'domingo': '20.33'
+            'domingo': '28.00',
+            'Total de venta por ruta': '202.33',
+            'Total de ventas sin domingos': '174.33',
+            'Total de ventas solo domingos': '28.00'
         },
         {
             'RUTA': '376',
@@ -269,14 +342,31 @@ export class SalesComponent implements  AfterViewInit {
             'jueves': '0.00',
             'viernes': '39.00',
             'sábado': '30.00',
-            'domingo': '23.67'
-        }];
+            'domingo': '23.67',
+            'Total de venta por ruta': '178.01',
+            'Total de ventas sin domingos': '154.34',
+            'Total de ventas solo domingos': '23.67'
+        },
+        {
+            'RUTA': 'TOTAL de venta por día',
+            'lunes': '465.28',
+            'martes': '453.99',
+            'miércoles': '511.73',
+            'jueves': '188.66',
+            'viernes': '602.98',
+            'sábado': '519.51',
+            'domingo': '500.15',
+            'Total de venta por ruta': '3,242.30',
+            'Total de ventas sin domingos': '2,742.15',
+            'Total de ventas solo domingos': '500.15'
+        }
+        ];
 
     ngAfterViewInit() {
         jexcel(document.getElementById('spreadsheet'), {
             data: this.data,
             columns: [
-                {title: 'RUTA', width: '100px', },
+                {title: 'RUTA', width: '150px', },
                 {title: 'lunes', width: '100px', },
                 {title: 'martes', width: '100px', },
                 {title: 'miércoles', width: '100px', },
@@ -289,7 +379,17 @@ export class SalesComponent implements  AfterViewInit {
                 {title: 'Total de ventas solo domingos', width: '200px', },
             ],
             style: {
-              // A1: 'background-color: orange;'
+               A27: 'background-color: green; color: white',
+               B27: 'background-color: green; color: white',
+               C27: 'background-color: green; color: white',
+               D27: 'background-color: green; color: white',
+               E27: 'background-color: green; color: white',
+               F27: 'background-color: green; color: white',
+               G27: 'background-color: green; color: white',
+               H27: 'background-color: green; color: white',
+               I27: 'background-color: green; color: white',
+               J27: 'background-color: gray; color: white',
+               K27: 'background-color: darkgray; color: white',
             },
             minDimensions: [8, 26]
         });
