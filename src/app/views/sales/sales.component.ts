@@ -7,16 +7,44 @@ import * as jexcel from 'jexcel';
     styleUrls: ['./sales.component.scss']
 })
 export class SalesComponent implements  AfterViewInit {
+    litros = true;
+    servicioss = false;
+    cilindros = false;
 
     data = [
-            ['PERIODO', '', '2020010101 del', '29/ENE/20 al 12/FEB/20', '', 'PERIODO ABIERTO', '', 'Autotanque - Servicios'],
+            // tslint:disable-next-line:max-line-length
+            ['PERIODO', '2020010101 del', '29/ENE/20 al 12/FEB/20', '', 'PERIODO ABIERTO', '', 'Autotanque - Servicios', 'Sucusal', '101 DPG Capital Sindico', 'TURNO MATUTINO'],
             // tslint:disable-next-line:max-line-length
             ['RUTA', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo', 'Total de venta por ruta', 'Total de ventas sin domingos', 'Total de ventas solo domingos'],
             [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00],
             [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00],
             [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00],
-            [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00]
+            [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00],
+            ['TOTAL de venta por día', 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00 ]
         ];
+
+    datas = [
+        // tslint:disable-next-line:max-line-length
+        ['PERIODO', '2020010101 del', '29/ENE/20 al 12/FEB/20', '', 'PERIODO ABIERTO', '', 'Autotanque - Servicios', 'Sucusal', '101 DPG Capital Sindico', 'TURNO MATUTINO'],
+        // tslint:disable-next-line:max-line-length
+        ['RUTA', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo', 'Total de venta por ruta', 'Total de ventas sin domingos', 'Total de ventas solo domingos'],
+        [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00],
+        [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00],
+        [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00],
+        ['TOTAL de venta por día', 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00 ]
+    ];
+
+    datass = [
+        // tslint:disable-next-line:max-line-length
+        ['PERIODO', '2020010101 del', '29/ENE/20 al 12/FEB/20', '', 'PERIODO ABIERTO', '', 'Autotanque - Servicios', 'Sucusal', '101 DPG Capital Sindico', 'TURNO MATUTINO'],
+        // tslint:disable-next-line:max-line-length
+        ['RUTA', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo', 'Total de venta por ruta', 'Total de ventas sin domingos', 'Total de ventas solo domingos'],
+        [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00],
+        [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00],
+        ['TOTAL de venta por día', 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00 ]
+    ];
+
+
 
     ngAfterViewInit() {
         jexcel(document.getElementById('litros'), {
@@ -46,83 +74,153 @@ export class SalesComponent implements  AfterViewInit {
                I1: 'fontWeight: bold',
                J1: 'fontWeight: bold',
                K1: 'fontWeight: bold',
-               A27: 'background-color: green; color: white',
-               B27: 'background-color: green; color: white',
-               C27: 'background-color: green; color: white',
-               D27: 'background-color: green; color: white',
-               E27: 'background-color: green; color: white',
-               F27: 'background-color: green; color: white',
-               G27: 'background-color: green; color: white',
-               H27: 'background-color: green; color: white',
-               I27: 'background-color: green; color: white',
-               J27: 'background-color: gray; color: white',
-               K27: 'background-color: darkgray; color: white',
+               A2: 'fontWeight: bold',
+               B2: 'fontWeight: bold',
+               C2: 'fontWeight: bold',
+               D2: 'fontWeight: bold',
+               E2: 'fontWeight: bold',
+               F2: 'fontWeight: bold',
+               G2: 'fontWeight: bold',
+               H2: 'fontWeight: bold',
+               I2: 'fontWeight: bold',
+               J2: 'fontWeight: bold',
+               K2: 'fontWeight: bold',
+               A7: 'background-color: green; color: white',
+               B7: 'background-color: green; color: white',
+               C7: 'background-color: green; color: white',
+               D7: 'background-color: green; color: white',
+               E7: 'background-color: green; color: white',
+               F7: 'background-color: green; color: white',
+               G7: 'background-color: green; color: white',
+               H7: 'background-color: green; color: white',
+               I7: 'background-color: green; color: white',
+               J7: 'background-color: gray; color: white',
+               K7: 'background-color: darkgray; color: white',
             },
             minDimensions: [8, 26]
         });
 
-        /*jexcel(document.getElementById('servicios'), {
-            data: this.data,
+        jexcel(document.getElementById('servicioss'), {
+            data: this.datas,
             columns: [
-                {title: 'RUTA', width: '150px', },
-                {title: 'lunes', width: '100px', },
-                {title: 'martes', width: '100px', },
-                {title: 'miércoles', width: '100px', },
-                {title: 'jueves', width: '100px', },
-                {title: 'viernes', width: '100px', },
-                {title: 'sábado', width: '100px', },
-                {title: 'domingo', width: '100px', },
-                {title: 'Total de venta por ruta', width: '150px', },
-                {title: 'Total de ventas sin domingos', width: '200px', },
-                {title: 'Total de ventas solo domingos', width: '200px', },
+                {width: '150px', },
+                {width: '100px', },
+                {width: '100px', },
+                {width: '100px', },
+                {width: '100px', },
+                {width: '100px', },
+                {width: '100px', },
+                {width: '100px', },
+                {width: '150px', },
+                {width: '200px', },
+                {width: '200px', },
             ],
             style: {
-               A27: 'background-color: green; color: white',
-               B27: 'background-color: green; color: white',
-               C27: 'background-color: green; color: white',
-               D27: 'background-color: green; color: white',
-               E27: 'background-color: green; color: white',
-               F27: 'background-color: green; color: white',
-               G27: 'background-color: green; color: white',
-               H27: 'background-color: green; color: white',
-               I27: 'background-color: green; color: white',
-               J27: 'background-color: gray; color: white',
-               K27: 'background-color: darkgray; color: white',
+               A1: 'fontWeight: bold',
+               B1: 'fontWeight: bold',
+               C1: 'fontWeight: bold',
+               D1: 'fontWeight: bold',
+               E1: 'fontWeight: bold',
+               F1: 'fontWeight: bold',
+               G1: 'fontWeight: bold',
+               H1: 'fontWeight: bold',
+               I1: 'fontWeight: bold',
+               J1: 'fontWeight: bold',
+               K1: 'fontWeight: bold',
+               A2: 'fontWeight: bold',
+               B2: 'fontWeight: bold',
+               C2: 'fontWeight: bold',
+               D2: 'fontWeight: bold',
+               E2: 'fontWeight: bold',
+               F2: 'fontWeight: bold',
+               G2: 'fontWeight: bold',
+               H2: 'fontWeight: bold',
+               I2: 'fontWeight: bold',
+               J2: 'fontWeight: bold',
+               K2: 'fontWeight: bold',
+               A7: 'background-color: green; color: white',
+               B7: 'background-color: green; color: white',
+               C7: 'background-color: green; color: white',
+               D7: 'background-color: green; color: white',
+               E7: 'background-color: green; color: white',
+               F7: 'background-color: green; color: white',
+               G7: 'background-color: green; color: white',
+               H7: 'background-color: green; color: white',
+               I7: 'background-color: green; color: white',
+               J7: 'background-color: gray; color: white',
+               K7: 'background-color: darkgray; color: white',
             },
             minDimensions: [8, 26]
         });
 
         jexcel(document.getElementById('cilindros'), {
-            data: this.data,
+            data: this.datass,
             columns: [
-                {title: 'RUTA', width: '150px', },
-                {title: 'lunes', width: '100px', },
-                {title: 'martes', width: '100px', },
-                {title: 'miércoles', width: '100px', },
-                {title: 'jueves', width: '100px', },
-                {title: 'viernes', width: '100px', },
-                {title: 'sábado', width: '100px', },
-                {title: 'domingo', width: '100px', },
-                {title: 'Total de venta por ruta', width: '150px', },
-                {title: 'Total de ventas sin domingos', width: '200px', },
-                {title: 'Total de ventas solo domingos', width: '200px', },
+                {width: '150px', },
+                {width: '100px', },
+                {width: '100px', },
+                {width: '100px', },
+                {width: '100px', },
+                {width: '100px', },
+                {width: '100px', },
+                {width: '100px', },
+                {width: '150px', },
+                {width: '200px', },
+                {width: '200px', },
             ],
             style: {
-               A27: 'background-color: green; color: white',
-               B27: 'background-color: green; color: white',
-               C27: 'background-color: green; color: white',
-               D27: 'background-color: green; color: white',
-               E27: 'background-color: green; color: white',
-               F27: 'background-color: green; color: white',
-               G27: 'background-color: green; color: white',
-               H27: 'background-color: green; color: white',
-               I27: 'background-color: green; color: white',
-               J27: 'background-color: gray; color: white',
-               K27: 'background-color: darkgray; color: white',
+               A1: 'fontWeight: bold',
+               B1: 'fontWeight: bold',
+               C1: 'fontWeight: bold',
+               D1: 'fontWeight: bold',
+               E1: 'fontWeight: bold',
+               F1: 'fontWeight: bold',
+               G1: 'fontWeight: bold',
+               H1: 'fontWeight: bold',
+               I1: 'fontWeight: bold',
+               J1: 'fontWeight: bold',
+               K1: 'fontWeight: bold',
+               A2: 'fontWeight: bold',
+               B2: 'fontWeight: bold',
+               C2: 'fontWeight: bold',
+               D2: 'fontWeight: bold',
+               E2: 'fontWeight: bold',
+               F2: 'fontWeight: bold',
+               G2: 'fontWeight: bold',
+               H2: 'fontWeight: bold',
+               I2: 'fontWeight: bold',
+               J2: 'fontWeight: bold',
+               K2: 'fontWeight: bold',
+               A7: 'background-color: green; color: white',
+               B7: 'background-color: green; color: white',
+               C7: 'background-color: green; color: white',
+               D7: 'background-color: green; color: white',
+               E7: 'background-color: green; color: white',
+               F7: 'background-color: green; color: white',
+               G7: 'background-color: green; color: white',
+               H7: 'background-color: green; color: white',
+               I7: 'background-color: green; color: white',
+               J7: 'background-color: gray; color: white',
+               K7: 'background-color: darkgray; color: white',
             },
             minDimensions: [8, 26]
-        });*/
+        });
+
+
     }
 
 
+
+    screen() {
+        if (this.litros === true && this.servicioss === false &&  this.cilindros === false) {
+         this.servicioss = false;
+         this.cilindros = false
+        } else if (this.litros === false && this.servicioss === true &&  this.cilindros === false) {
+            this.litros = false;
+            this.cilindros = false
+        } else if (this.litros === false && this.servicioss === false &&  this.cilindros === true) {
+            this.litros = false;
+            this.servicioss = false
+        }
+    }
 }
