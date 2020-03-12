@@ -76,6 +76,8 @@ export class SalesComponent implements  AfterViewInit {
                 // row colours
                 if(row == 0) {
                     cell.style.fontWeight = 'bold';
+                    cell.classList.add('readonly');
+                    cell.style.color = '#000';
                 }
                 if (row == 2) {
                     if(col == 0) {
@@ -85,32 +87,45 @@ export class SalesComponent implements  AfterViewInit {
                     }
                     cell.style.backgroundColor = 'grey';
                     cell.style.fontWeight = 'bold';
+                    cell.classList.add('readonly');
                 }
                 if (row == 3) {
+                    cell.style.color = '#000';
                     cell.style.backgroundColor = 'grey';
                     cell.style.fontWeight = 'bold';
+                    cell.classList.add('readonly');
                 }
                 if(row >= 4 && row < 9) {
                     if(col == 0) {
                         cell.style.backgroundColor = 'grey';
                         cell.style.fontWeight = 'bold';
                         cell.style.color = '#ffffff';
+                        cell.classList.add('readonly');
+                        cell.style.color = '#000';
                     }
                     if(col == 8) {
                         cell.style.backgroundColor = 'green';
                         cell.style.fontWeight = 'bold';
+                        cell.classList.add('readonly');
+                        cell.style.color = '#000';
                     }
                     if(col == 9) {
                         cell.style.backgroundColor = 'grey';
                         cell.style.fontWeight = 'bold';
+                        cell.classList.add('readonly');
+                        cell.style.color = '#000';
                     }
                     if(col == 10) {
                         cell.style.backgroundColor = 'silver';
                         cell.style.fontWeight = 'bold';
+                        cell.classList.add('readonly');
+                        cell.style.color = '#000';
                     }
                 }
         
                 if(row == 9) {
+                    cell.classList.add('readonly');
+                    cell.style.color = '#000';
                     if(col <= 7) {
                         cell.style.backgroundColor = 'green';
                         cell.style.fontWeight = 'bold';
