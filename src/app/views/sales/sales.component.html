@@ -1,6 +1,19 @@
 <div class="main-content">
     <div class="container-fluid">
         <div class="row">
+                <div align="center">
+                        <form class="form-inline">
+                            <div class="">
+                                <button type="button" class="btn btn-primary" (click)="litros = true">Litros</button>
+                            </div>
+                            <div class="periodo">
+                                <button type="button" class="btn btn-primary" (click)="servicioss = true">Servicios</button>
+                            </div>
+                            <div class="periodo">
+                                <button type="button" class="btn btn-primary" (click)="cilindros= true">Cilindros</button>
+                            </div>
+                        </form>
+                    </div>
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body" style="overflow: auto;">
@@ -18,19 +31,7 @@
                             </form>
                         </div>-->
 
-                        <div align="center">
-                            <form class="form-inline">
-                                <div class="">
-                                    <button type="button" class="btn btn-primary" (click)="litros = true">Litros</button>
-                                </div>
-                                <div class="periodo">
-                                    <button type="button" class="btn btn-primary" (click)="servicioss = true">Servicios</button>
-                                </div>
-                                <div class="periodo">
-                                    <button type="button" class="btn btn-primary" (click)="cilindros= true">Cilindros</button>
-                                </div>
-                            </form>
-                        </div>
+                        
                         <div *ngIf="litros === true" id="litros"></div>
                         <div *ngIf="servicioss === true" id="servicios"></div>
                         <div *ngIf="cilindros === true" id="cilindros"></div>
