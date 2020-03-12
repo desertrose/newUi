@@ -7,9 +7,9 @@ import * as jexcel from 'jexcel';
     styleUrls: ['./sales.component.scss']
 })
 export class SalesComponent implements  AfterViewInit {
-    litros;
-    servicioss ;
-    cilindros;
+    litros = false;
+    servicioss = true;
+    cilindros = true;
 
     data = [
             // tslint:disable-next-line:max-line-length
@@ -22,29 +22,37 @@ export class SalesComponent implements  AfterViewInit {
             [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00],
             [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00],
             [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00],
-            [],
+            [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00],
             ['TOTAL de venta por día', '=SUM(B5:B9)', '=SUM(C5:C9)', '=SUM(D5:D9)', '=SUM(E5:E9)', '=SUM(F5:F9)', '=SUM(G5:G9)', '=SUM(H5:H9)', '=SUM(I5:I9)', '=SUM(J5:J9)', '=SUM(K5:K9)' ]
         ];
 
     datas = [
         // tslint:disable-next-line:max-line-length
-        ['PERIODO', '2020010101 del', '29/ENE/20 al 12/FEB/20', '', 'PERIODO ABIERTO', '', 'Autotanque - Servicios', 'Sucusal', '101 DPG Capital Sindico', 'TURNO MATUTINO'],
+        ['PERIODO', '2020010101 del 29/ENE/20 al 12/FEB/20', '', '', 'PERIODO ABIERTO', '', 'Autotanque - Litors', '', 'Sucusal', '101 DPG Capital Sindico', 'TURNO MATUTINO'],
+        [],
         // tslint:disable-next-line:max-line-length
         ['RUTA', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo', 'Total de venta por ruta', 'Total de ventas sin domingos', 'Total de ventas solo domingos'],
+        ['', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo', 'Total de venta por ruta', 'Total de ventas sin domingos', 'Total de ventas solo domingos'],
+        [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, '=SUM(B5, C5, D5,E5,F5,G5,H5)', '=SUM(B5, C5, D5,E5,F5,G5)', '=SUM(H5)'],
         [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00],
-        [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00],
-        [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00],
-        ['TOTAL de venta por día', 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00 ]
+        [],
+        [],
+        ['TOTAL de venta por día', '=SUM(B5:B9)', '=SUM(C5:C9)', '=SUM(D5:D9)', '=SUM(E5:E9)', '=SUM(F5:F9)', '=SUM(G5:G9)', '=SUM(H5:H9)', '=SUM(I5:I9)', '=SUM(J5:J9)', '=SUM(K5:K9)' ]
     ];
 
     datass = [
         // tslint:disable-next-line:max-line-length
-        ['PERIODO', '2020010101 del', '29/ENE/20 al 12/FEB/20', '', 'PERIODO ABIERTO', '', 'Cylindro', 'Sucusal', '101 DPG Capital Sindico', 'TURNO MATUTINO'],
+        ['PERIODO', '2020010101 del 29/ENE/20 al 12/FEB/20', '', '', 'PERIODO ABIERTO', '', 'Autotanque - Litors', '', 'Sucusal', '101 DPG Capital Sindico', 'TURNO MATUTINO'],
+        [],
         // tslint:disable-next-line:max-line-length
         ['RUTA', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo', 'Total de venta por ruta', 'Total de ventas sin domingos', 'Total de ventas solo domingos'],
+        ['', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo', 'Total de venta por ruta', 'Total de ventas sin domingos', 'Total de ventas solo domingos'],
+        [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, '=SUM(B5, C5, D5,E5,F5,G5,H5)', '=SUM(B5, C5, D5,E5,F5,G5)', '=SUM(H5)'],
         [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00],
-        [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00],
-        ['TOTAL de venta por día', 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00 ]
+        [],
+        [],
+        [],
+        ['TOTAL de venta por día', '=SUM(B5:B9)', '=SUM(C5:C9)', '=SUM(D5:D9)', '=SUM(E5:E9)', '=SUM(F5:F9)', '=SUM(G5:G9)', '=SUM(H5:H9)', '=SUM(I5:I9)', '=SUM(J5:J9)', '=SUM(K5:K9)' ]
     ];
 
 
@@ -74,7 +82,7 @@ export class SalesComponent implements  AfterViewInit {
             updateTable: function(instance, cell, col, row, val, label, cellName) {
 
                 // row colours
-                if (row == 0) {
+                if (row === 0) {
                     cell.style.fontWeight = 'bold';
                     cell.classList.add('readonly');
                     cell.style.color = '#000';
@@ -172,7 +180,7 @@ export class SalesComponent implements  AfterViewInit {
             updateTable: function(instance, cell, col, row, val, label, cellName) {
 
                 // row colours
-                if (row == 0) {
+                if (row === 0) {
                     cell.style.fontWeight = 'bold';
                     cell.classList.add('readonly');
                     cell.style.color = '#000';
@@ -270,7 +278,7 @@ export class SalesComponent implements  AfterViewInit {
             updateTable: function(instance, cell, col, row, val, label, cellName) {
 
                 // row colours
-                if (row == 0) {
+                if (row === 0) {
                     cell.style.fontWeight = 'bold';
                     cell.classList.add('readonly');
                     cell.style.color = '#000';
@@ -348,20 +356,20 @@ export class SalesComponent implements  AfterViewInit {
 
 
     litroscheck() {
-            this.litros = true;
-            this.servicioss = false;
-            this.cilindros = false;
+            this.litros = false;
+            this.servicioss = true;
+            this.cilindros = true;
     }
     serviciosscheck() {
-            this.servicioss = true;
-            this.litros = false;
-            this.cilindros = false;
+            this.servicioss = false;
+            this.litros = true;
+            this.cilindros = true;
     }
     cilindroscheck() {
 
-            this.cilindros = true;
-            this.servicioss = false;
-            this.litros = false;
+            this.cilindros = false;
+            this.servicioss = true;
+            this.litros = true;
 
     }
 }
