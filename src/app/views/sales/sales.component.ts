@@ -16,8 +16,8 @@ export class SalesComponent implements  AfterViewInit {
             ['PERIODO', '2020010101 del 29/ENE/20 al 12/FEB/20', '', '', 'PERIODO ABIERTO', '', 'Autotanque - Litors', '', 'Sucusal', '101 DPG Capital Sindico', 'TURNO MATUTINO'],
             [],
             // tslint:disable-next-line:max-line-length
-            ['RUTA', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo', 'Total de venta por ruta', 'Total de ventas sin domingos', 'Total de ventas solo domingos'],
-            ['', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo', 'Total de venta por ruta', 'Total de ventas sin domingos', 'Total de ventas solo domingos'],
+            ['RUTA', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo', 'Total de venta por ruta', 'Total de ventas sin domingos', 'Total de ventas solo domingos'],
+            ['', '12/03/2020', '13/03/2020', '14/03/2020', '15/03/2020', '16/03/2020', '17/03/2020', '18/03/2020', 'Total de venta por ruta', 'Total de ventas sin domingos', 'Total de ventas solo domingos'],
             [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, '=SUM(B5, C5, D5,E5,F5,G5,H5)', '=SUM(B5, C5, D5,E5,F5,G5)', '=SUM(H5)'],
             [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00],
             [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00],
@@ -31,8 +31,8 @@ export class SalesComponent implements  AfterViewInit {
         ['PERIODO', '2020010101 del 29/ENE/20 al 12/FEB/20', '', '', 'PERIODO ABIERTO', '', 'Autotanque - Litors', '', 'Sucusal', '101 DPG Capital Sindico', 'TURNO MATUTINO'],
         [],
         // tslint:disable-next-line:max-line-length
-        ['RUTA', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo', 'Total de venta por ruta', 'Total de ventas sin domingos', 'Total de ventas solo domingos'],
-        ['', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo', 'Total de venta por ruta', 'Total de ventas sin domingos', 'Total de ventas solo domingos'],
+        ['RUTA', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo', 'Total de venta por ruta', 'Total de ventas sin domingos', 'Total de ventas solo domingos'],
+        ['', '12/03/2020', '13/03/2020', '14/03/2020', '15/03/2020', '16/03/2020', '17/03/2020', '18/03/2020', 'Total de venta por ruta', 'Total de ventas sin domingos', 'Total de ventas solo domingos'],
         [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, '=SUM(B5, C5, D5,E5,F5,G5,H5)', '=SUM(B5, C5, D5,E5,F5,G5)', '=SUM(H5)'],
         [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00],
         [],
@@ -45,8 +45,8 @@ export class SalesComponent implements  AfterViewInit {
         ['PERIODO', '2020010101 del 29/ENE/20 al 12/FEB/20', '', '', 'PERIODO ABIERTO', '', 'Autotanque - Litors', '', 'Sucusal', '101 DPG Capital Sindico', 'TURNO MATUTINO'],
         [],
         // tslint:disable-next-line:max-line-length
-        ['RUTA', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo', 'Total de venta por ruta', 'Total de ventas sin domingos', 'Total de ventas solo domingos'],
-        ['', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo', 'Total de venta por ruta', 'Total de ventas sin domingos', 'Total de ventas solo domingos'],
+        ['RUTA', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo', 'Total de venta por ruta', 'Total de ventas sin domingos', 'Total de ventas solo domingos'],
+        ['', '12/03/2020', '13/03/2020', '14/03/2020', '15/03/2020', '16/03/2020', '17/03/2020', '18/03/2020', 'Total de venta por ruta', 'Total de ventas sin domingos', 'Total de ventas solo domingos'],
         [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, '=SUM(B5, C5, D5,E5,F5,G5,H5)', '=SUM(B5, C5, D5,E5,F5,G5)', '=SUM(H5)'],
         [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00],
         [],
