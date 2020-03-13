@@ -4,5 +4,7 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  urlWebApi: 'https://potogasapi.azurewebsites.net',//http://localhost:4202/
+  IdAppGoogle: '871841198873-1dajfn2v2896tfcklsaahnqjir5vj8af.apps.googleusercontent.com'
 };

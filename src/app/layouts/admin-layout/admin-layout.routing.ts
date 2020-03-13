@@ -7,6 +7,7 @@ import {AttendanceComponent} from '../../views/attendance/attendance.component';
 import {PreSettlementComponent} from '../../views/pre-settlement/pre-settlement.component';
 import {ValidatorsComponent} from '../../views/validators/validators.component';
 import {AddSalesComponent} from '../../views/add-sales/add-sales.component';
+import { AuthGuard } from '../../helpers/Auth.Guard'
 
 
 export const AdminLayoutRoutes: Routes = [
@@ -52,11 +53,11 @@ export const AdminLayoutRoutes: Routes = [
     //         component: UpgradeComponent
     //     }]
     // }
-    {path: 'dashboard', component: DashboardComponent},
-    {path: 'sales-records', component: SalesComponent},
-    {path: 'incidents', component: IncidentComponent},
-    {path: 'attendance', component: AttendanceComponent},
-    {path: 'pre-settlement', component: PreSettlementComponent},
-    {path: 'validators', component: ValidatorsComponent},
-    {path: 'add-sales', component: AddSalesComponent},
+    {path: 'dashboard', canActivate: [AuthGuard], component: DashboardComponent},
+    {path: 'sales-records', canActivate: [AuthGuard], component: SalesComponent},
+    {path: 'incidents', canActivate: [AuthGuard], component: IncidentComponent},
+    {path: 'attendance', canActivate: [AuthGuard], component: AttendanceComponent},
+    {path: 'pre-settlement', canActivate: [AuthGuard], component: PreSettlementComponent},
+    {path: 'validators', canActivate: [AuthGuard], component: ValidatorsComponent},
+    {path: 'add-sales', canActivate: [AuthGuard], component: AddSalesComponent},
 ];

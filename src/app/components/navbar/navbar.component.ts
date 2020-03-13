@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
+    UserInfo: string = localStorage.getItem('FullName');
+    ImageUrl: string = localStorage.getItem('Picture');
     lastlogintime : Date = new Date();
     private listTitles: any[];
     location: Location;

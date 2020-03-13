@@ -25,7 +25,7 @@
                 <div class="container-login100-form-btn">
                     <div class="wrap-login100-form-btn">
                         <div class="login100-form-bgbtn"></div>
-                        <button class="login100-form-btn">
+                        <button class="login100-form-btn" (click)="signinLocalAccount()">
                             Login
                         </button>
                     </div>
@@ -36,7 +36,7 @@
                             <img class="google-icon"
                                  src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"/>
                         </div>
-                        <p class="btn-text"><b>Sign in with google</b></p>
+                        <p class="btn-text" (click)="signinWithGoogle()"><b>Sign in with google</b></p>
                     </div>
                 </div>
 
