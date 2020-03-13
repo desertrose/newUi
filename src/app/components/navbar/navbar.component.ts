@@ -22,7 +22,14 @@ export class NavbarComponent implements OnInit {
       this.location = location;
           this.sidebarVisible = false;
     }
-
+    logout()
+    {
+      localStorage.setItem('Email','');
+      localStorage.setItem('Picture','');
+      localStorage.setItem('FullName','');  
+      localStorage.setItem('Token','');
+      this.router.navigate(['/login']);
+    }
     ngOnInit() {
       this.listTitles = ROUTES.filter(listTitle => listTitle);
       const navbar: HTMLElement = this.element.nativeElement;

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 declare const $: any;
 declare interface RouteInfo {
@@ -22,12 +23,22 @@ export const ROUTES: RouteInfo[] = [
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
+   UserInfo: string = localStorage.getItem('FullName');
+    ImageUrl: string = localStorage.getItem('Picture');
   menuItems: any[];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.menuItems = ROUTES.filter(menuItem => menuItem);
+  }
+  logout()
+  {
+    localStorage.setItem('Email','');
+    localStorage.setItem('Picture','');
+    localStorage.setItem('FullName','');  
+    localStorage.setItem('Token','');
+    this.router.navigate(['/login']);
   }
   isMobileMenu() {
       // if ($(window).width() > 991) {
