@@ -6,7 +6,6 @@ import {IncidentComponent} from '../../views/incident/incident.component';
 import {AttendanceComponent} from '../../views/attendance/attendance.component';
 import {PreSettlementComponent} from '../../views/pre-settlement/pre-settlement.component';
 import {ValidatorsComponent} from '../../views/validators/validators.component';
-import {AddSalesComponent} from '../../views/add-sales/add-sales.component';
 
 
 export const AdminLayoutRoutes: Routes = [
@@ -58,5 +57,4 @@ export const AdminLayoutRoutes: Routes = [
     {path: 'attendance', component: AttendanceComponent},
     {path: 'pre-settlement', component: PreSettlementComponent},
     {path: 'validators', component: ValidatorsComponent},
-    {path: 'add-sales', component: AddSalesComponent},
 ];
