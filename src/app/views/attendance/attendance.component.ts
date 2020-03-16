@@ -13,14 +13,14 @@ export class AttendanceComponent implements  AfterViewInit {
     ['PERIODO', '2020010101 del 29/ENE/20 al 12/FEB/20', '', '', 'PERIODO ABIERTO', '', 'Autotanque - Litors', '', 'Sucusal', '101 DPG Capital Sindico', 'TURNO MATUTINO'],
     [],
     // tslint:disable-next-line:max-line-length
-    ['Empleado', 'Ruta Fija', 'Puesto', '11/03/2020', ],
+    ['Empleado', 'Ruta Fija', 'Puesto', '11/03/2020', '', '', '12/03/2020', '', '', '12/03/2020', ],
     // tslint:disable-next-line:max-line-length
-    ['', '', '11/03/2020', '12/03/2020', '13/03/2020', '14/03/2020', '15/03/2020', '16/03/2020', '17/03/2020', '18/03/2020'],
-    ['1101172', '', '', 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00],
-    ['1101175', '', '', 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00],
-    ['1101176', '', '', 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00],
-    ['1101178', '', '', 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00],
-    ['1101171', '', '', 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00],
+    ['', '', '11/03/2020', 'Ruta', 'Actividad', 'Incidencia', 'Ruta', 'Actividad', 'Incidencia', 'Ruta', 'Actividad', 'Incidencia'],
+    ['Covarrubias Rodriguez Jose Alfredo', '', 'Chofer Vendedor Autotanque',  'R502', 'Chofer', 'Incapacidad interna', 'R502', 'Chofer', 'Incapacidad interna', 'R502', 'Chofer', 'Incapacidad interna'],
+    ['Gonzalez Morales Hector Hugo', '', 'Chofer Vendedor Autotanque',  'R502', 'Chofer', 'Incapacidad interna', 'R502', 'Chofer', 'Incapacidad interna', 'R502', 'Chofer', 'Incapacidad interna'],
+    ['Sosa Castillo Lorenzo', '', 'Chofer Vendedor Autotanque',  'R502', 'Chofer', 'Incapacidad interna', 'R502', 'Chofer', 'Incapacidad interna', 'R502', 'Chofer', 'Incapacidad interna'],
+    ['Godinez Palomo Edgard', '', 'Chofer Vendedor Autotanque',  'R502', 'Chofer', 'Incapacidad interna', 'R502', 'Chofer', 'Incapacidad interna', 'R502', 'Chofer', 'Incapacidad interna'],
+    ['Navarro Jacobo Tomas', '', 'Chofer Vendedor Autotanque',  'R502', 'Chofer', 'Incapacidad interna', 'R502', 'Chofer', 'Incapacidad interna', 'R502', 'Chofer', 'Incapacidad interna'],
   ];
 
   constructor() { }
@@ -28,6 +28,8 @@ export class AttendanceComponent implements  AfterViewInit {
   ngAfterViewInit() {
     jexcel(document.getElementById('attendance'), {
       data: this.data,
+      // tableOverflow: true,
+      minDimensions: [12, 26],
       mergeCells: {
         B1: [3, 1],
         E1: [2, 1],
@@ -35,6 +37,9 @@ export class AttendanceComponent implements  AfterViewInit {
         A3: [1, 2],
         B3: [1, 2],
         C3: [1, 2],
+        D3: [3, 1],
+        G3: [3, 1],
+        J3: [3, 1],
       },
       columns: [
         {width: '250px', },
@@ -47,6 +52,7 @@ export class AttendanceComponent implements  AfterViewInit {
         {width: '100px', },
         {width: '100px', },
         {width: '150px', },
+        {width: '200px', },
         {width: '200px', },
         {width: '200px', },
       ],
@@ -113,8 +119,6 @@ export class AttendanceComponent implements  AfterViewInit {
           }
         }*/
       },
-
-      minDimensions: [8, 26]
     });
   }
 
