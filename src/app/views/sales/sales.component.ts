@@ -18,12 +18,12 @@ export class SalesComponent implements  AfterViewInit {
             // tslint:disable-next-line:max-line-length
             ['RUTA', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo', 'Total de venta por ruta', 'Total de ventas sin domingos', 'Total de ventas solo domingos'],
             ['', '12/03/2020', '13/03/2020', '14/03/2020', '15/03/2020', '16/03/2020', '17/03/2020', '18/03/2020', 'Total de venta por ruta', 'Total de ventas sin domingos', 'Total de ventas solo domingos'],
-            [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, '=SUM(B5, C5, D5,E5,F5,G5,H5)', '=SUM(B5, C5, D5,E5,F5,G5)', '=SUM(H5)'],
+            [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, '=ROUND(SUM(B5:H5), 2)', '=ROUND(SUM(B5:G5), 2)', '=ROUND(SUM(H5), 2)'],
             [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00],
             [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00],
             [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00],
             [202, 21.67, 17.67, 21.67, 22.33, 18.67, 20.67, 18.00, 140.68, 122.68, 18.00],
-            ['TOTAL de venta por día', '=SUM(B5:B9)', '=SUM(C5:C9)', '=SUM(D5:D9)', '=SUM(E5:E9)', '=SUM(F5:F9)', '=SUM(G5:G9)', '=SUM(H5:H9)', '=SUM(I5:I9)', '=SUM(J5:J9)', '=SUM(K5:K9)' ]
+            ['TOTAL de venta por día', '=ROUND(SUM(B5:B9), 2)', '=ROUND(SUM(C5:C9), 2)', '=ROUND(SUM(D5:D9), 2)', '=ROUND(SUM(E5:E9), 2)', '=ROUND(SUM(F5:F9), 2)', '=ROUND(SUM(G5:G9), 2)', '=ROUND(SUM(H5:H9), 2)', '=ROUND(SUM(I5:I9), 2)', '=ROUND(SUM(J5:J9), 2)', '=ROUND(SUM(K5:K9), 2)' ]
         ];
 
     datas = [
@@ -60,6 +60,10 @@ export class SalesComponent implements  AfterViewInit {
     ngAfterViewInit() {
         jexcel(document.getElementById('litros'), {
             data: this.data,
+            defaultColWidth: 100,
+            tableOverflow: true,
+            tableWidth: "900px",
+            freezeColumns: 3,
             mergeCells: {
                 B1: [3, 1],
                 E1: [2, 1],
