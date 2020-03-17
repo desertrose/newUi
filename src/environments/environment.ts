@@ -5,6 +5,6 @@
 
 export const environment = {
   production: false,
-  urlWebApi: 'https://potogasapi.azurewebsites.net',//http://localhost:4202/
+  urlWebApi: 'http://localhost:4202/',//'https://potogasapi.azurewebsites.net',
   IdAppGoogle: '871841198873-1dajfn2v2896tfcklsaahnqjir5vj8af.apps.googleusercontent.com'
 };

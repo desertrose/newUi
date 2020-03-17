@@ -3,6 +3,7 @@ import { AuthService, GoogleLoginProvider } from 'angular5-social-login';
 import {Service} from '../../services/service'
 import {GoogleUser} from '../../models/GoogleUser'
 import { Router } from '@angular/router';
+import {LocalUser} from '../../models/LocalUser'
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
+  email: string = '';
+  pass: string = '';
   constructor(private socialAuthService: AuthService, public service: Service, private router: Router) { }
 
   ngOnInit() {
@@ -41,10 +43,21 @@ export class LoginComponent implements OnInit {
  }
  public signinLocalAccount()
  {
-   localStorage.setItem('Token','TokenValido');
-   localStorage.setItem('Email','usuario@local');
-   localStorage.setItem('Picture','');
-   localStorage.setItem('FullName','Usuario Local');
-   this.router.navigate(['/dashboard']);
+    this.service.Login(this.email, this.pass).subscribe(data=>
+    {
+      if(data!=null)
+      {
+        let user = data as LocalUser;
+        localStorage.setItem('Email',user.Email);
+        localStorage.setItem('Picture',user.Picture);
+        localStorage.setItem('FullName',user.Name+" "+user.LastName);
+        localStorage.setItem('Token','Token Valido');
+        this.router.navigate(['/dashboard']);
+      }
+      else{
+        alert('Password o Email incorrecto');
+        localStorage.setItem('Token','');
+      }
+    });
  }
 }

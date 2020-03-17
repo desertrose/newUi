@@ -5,6 +5,7 @@ import {FormsModule} from '@angular/forms';
 import {AuthLayoutRoutes} from './auth-layout.routing';
 import {LoginComponent} from '../../views/login/login.component';
 import {RegisterComponent} from '../../views/register/register.component';
+import {ConfirmEmailComponent} from '../../views/confirm-email/confirm-email.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import {RegisterComponent} from '../../views/register/register.component';
     ],
     declarations: [
         LoginComponent,
-        RegisterComponent
+        RegisterComponent,
+        ConfirmEmailComponent
     ]
 })
 export class AuthLayoutModule {
