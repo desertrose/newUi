@@ -13,7 +13,9 @@ import {LocalUser} from '../../models/LocalUser'
 export class LoginComponent implements OnInit {
   email: string = '';
   pass: string = '';
-  constructor(private socialAuthService: AuthService, public service: Service, private router: Router) { }
+  constructor(private socialAuthService: AuthService, public service: Service, private router: Router) { 
+    localStorage.setItem('Token','');
+  }
 
   ngOnInit() {
   }
