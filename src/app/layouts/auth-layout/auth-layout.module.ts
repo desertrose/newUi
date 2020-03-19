@@ -6,6 +6,7 @@ import {AuthLayoutRoutes} from './auth-layout.routing';
 import {LoginComponent} from '../../views/login/login.component';
 import {RegisterComponent} from '../../views/register/register.component';
 import {ConfirmEmailComponent} from '../../views/confirm-email/confirm-email.component';
+import {ErrorPageComponent} from '../../views/error-page/error-page.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import {ConfirmEmailComponent} from '../../views/confirm-email/confirm-email.com
     declarations: [
         LoginComponent,
         RegisterComponent,
-        ConfirmEmailComponent
+        ConfirmEmailComponent,
+        ErrorPageComponent
     ]
 })
 export class AuthLayoutModule {
