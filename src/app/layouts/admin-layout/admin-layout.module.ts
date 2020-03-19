@@ -12,6 +12,18 @@ import {PreSettlementComponent} from '../../views/pre-settlement/pre-settlement.
 import {AttendanceComponent} from '../../views/attendance/attendance.component';
 import {ValidatorsComponent} from '../../views/validators/validators.component';
 import {IncidentComponent} from '../../views/incident/incident.component';
+import { EmployeesComponent } from '../../views/querys/employees/employees.component';
+import { RoutesComponent } from '../../views/querys/routes/routes.component';
+import { BusComponent } from '../../views/querys/bus/bus.component';
+import { BranchsComponent } from '../../views/querys/branchs/branchs.component';
+import { PeriodsComponent } from '../../views/querys/periods/periods.component';
+import { PayrollTypesComponent } from '../../views/querys/payroll-types/payroll-types.component';
+import { ActivitiesComponent } from '../../views/querys/activities/activities.component';
+import { PositionsComponent } from '../../views/querys/positions/positions.component';
+import { IncidencesComponent } from '../../views/querys/incidences/incidences.component';
+import { FactorsComponent } from '../../views/querys/factors/factors.component';
+import { LeavesComponent } from '../../views/querys/leaves/leaves.component';
+import { AbsenteeismsComponent } from '../../views/querys/absenteeisms/absenteeisms.component';
 
 
 @NgModule({
@@ -34,6 +46,18 @@ import {IncidentComponent} from '../../views/incident/incident.component';
         AttendanceComponent,
         ValidatorsComponent,
         IncidentComponent,
+        EmployeesComponent,
+        RoutesComponent,
+        BusComponent,
+        BranchsComponent,
+        PeriodsComponent,
+        PayrollTypesComponent,
+        ActivitiesComponent,
+        PositionsComponent,
+        IncidencesComponent,
+        FactorsComponent,
+        LeavesComponent,
+        AbsenteeismsComponent,
     ]
 })
 
