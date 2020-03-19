@@ -1,6 +1,27 @@
 <div class="main-content">
   <div class="container-fluid">
     <div class="row">
+      <div align="center">
+        <form class="form-inline">
+          <div class="">
+            <button type="button" class="btn ">Vacaciones</button>
+          </div>
+          <div class="periodo">
+            <button type="button" class="btn">Incapacidad</button>
+          </div>
+          <div class="periodo">
+            <button type="button" class="btn ">Ausentismo</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body" style="overflow: auto;">
+            <div [hidden]="vacaciones" id="incidents"></div>
+
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
